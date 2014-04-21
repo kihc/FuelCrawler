@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <title>Bencin, dizel, kurilno olje - cene naftnih derivatov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="nafta, bencin, 95-oktanski, 98-oktanski, dizel, dizl, diesel, kurilno olje, zgodovina, statistika, cena, trošarina, davek" />
+
+    <!--
+    <PageMap>
+        <DataObject type="document">
+            <Attribute name="title">Cene naftnih derivatov</Attribute>
+            <Attribute name="author">Vol00har</Attribute>
+            <Attribute name="description">Cene bencina in ostalih naftnih derivatov</Attribute>
+            <Attribute name="last_update">3/11/2013</Attribute>
+        </DataObject>
+
+  </PageMap>
+  -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="./assets/ico/favicon128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="64x64" href="./assets/ico/favicon64.png">
+    <link rel="apple-touch-icon-precomposed" href="./assets/ico/favicon48.png">
+    <link rel="shortcut icon" href="./assets/ico/favicon.png">
+
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript">
+          google.load("visualization", "1", {packages:["corechart"]});
+          google.load("visualization", "1", {packages:["annotatedTimeLine"]});
+          google.load("visualization", "1", {packages: ["controls"]});
+          google.setOnLoadCallback(drawChart);
+          google.setOnLoadCallback(drawTorta);
+          google.setOnLoadCallback(drawLine);
+
+          function drawLine() {
+            var JSONdata = {{ JSONtemperatura }}
+            var data = new google.visualization.DataTable(JSONdata);
+
+            var options = {
+              title: 'Company Performance',
+              hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+              vAxis: {minValue: 0, maxValue: 2}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('line'));
+            chart.draw(data, options);
+          }
+          function drawChart() {
+
+              //var data = google.visualization.arrayToDataTable(
+            //          {{ podatki }}
+          //);
+
+          var json_data = {{ json_barchart }}
+          var data = new google.visualization.DataTable(json_data);
+
+          var options = {
+              isStacked: true,
+              title: 'Deleži cene v EUR',
+              colors: ['#3366CC', '#16CE1C', '#7517CC', '#DC3912', '#FF9900'],
+              hAxis: {title: 'Derivat', titleTextStyle: {color: 'gray'}}
+
+          };
+
+          var chart = new google.visualization.ColumnChart(document.getElementById('graf'));
+          chart.draw(data, options);
+          }
+
+          function drawTorta()
+          {
+            var json_data = {{ json_torta }}
+            var data = new google.visualization.DataTable(json_data);
+
+          // Define a category picker control for the Gender column
+            var categoryPicker = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
+          'containerId': 'dropdownlist',
+          'options': {
+            'filterColumnLabel': 'Derivat',
+            'ui': {
+            'labelStacking': 'vertical',
+              'allowTyping': false,
+              'allowMultiple': false
+            }
+          }
+        });
+
+        categoryPicker.setState({'selectedValues': ['Dizel']});
+
+        // Define a Pie chart
+        var pie = new google.visualization.ChartWrapper({
+          'chartType': 'PieChart',
+          'containerId': 'tortica',
+          'options': {
+            'width': 600,
+            'height': 300,
+            'title': 'Donuts eaten per person',
+            'chartArea': {'left': 15, 'top': 15, 'right': 0, 'bottom': 0},
+            'pieSliceText': 'label',
+            slices: {  3: {offset: 0.2},
+                    4: {offset: 0.3}
+          }
+          },
+          // Instruct the piechart to use colums 0 (Name) and 3 (Donuts Eaten)
+          // from the 'data' DataTable.
+          'view': {'columns': [0, 2]}
+        });
+
+
+
+        // Create a dashboard
+        var a = new google.visualization.Dashboard(document.getElementById('torta')).bind(categoryPicker, pie).draw(data);
+
+      }
+
+      function drawneki() {
+      // Create and populate the data table.
+
+          var JSONdata = {{ JSONtemperatura }}
+          var data = new google.visualization.DataTable(JSONdata);
+
+          // Create and draw the visualization.
+          var neki = new google.visualization.AnnotatedTimeLine(document.getElementById('line'));
+
+          neki.draw(data, {'displayAnnotations': true});
+    }
+      </script>
+
+  </head>
+
+    <body>
+        <div class="container-narrow">
+
+        <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li{% if subpage == "/" %} class=active{% endif %}><a href="/">Derivati</a></li>
+            <li{% if subpage == "/casovno" %} class=active{% endif %}><a href="casovno">P(t)</a></li>
+            <li{% if subpage == "/podrobno" %} class=active{% endif %}><a href="podrobno">Derivati podrobno</a></li>
+            <li{% if subpage == "/oblikovanje" %} class=active{% endif %}><a href="napoved">Napoved</a></li>
+            <li{% if subpage == "/oblikovanje" %} class=active{% endif %}><a href="oblikovanje">Oblikovanje cen</a></li>
+            <li{% if subpage == "/naroci" %} class=active{% endif %}><a href="naroci">Obveščanje</a></li>
+        </ul>
+        <br />
+        <br />
+        <h2 class="muted">CENE NAFTNIH DERIVATOV</h2>
+        <h3 class="muted">bencin, dizel, kurilno olje</h3>
+        </div>
+        <hr id="head_separator">
+      <ul id="lala">
+      {{ krnekiHoriz }}
+      </ul>
+      <br />
+      <div id="bla">
+      Zadnja sprememba <b>{{ datum.strftime('%d. %m. %Y') }}</b> ob <b>{{ datum.strftime('%H:%M') }}</b>
+      </div>
+
+      <hr>
+
+      {% if subpage == "/" %}
+
+      <div id="graf" class="jumbotron">
+      </div>
+
+
+
+      <div class="row-fluid marketing">
+        <div class="span6">
+            <h4>Zadnja sprememba</h4>
+            <p>
+            {{ krneki }}
+            </p>
+        </div>
+
+
+
+        <div class="span6">
+          <h4>Povzeto po</h4>
+          <p>
+          <a href="http://www.mgrt.gov.si/si/delovna_podrocja/notranji_trg/sektor_za_preskrbo_nadzor_cen_in_varstvo_konkurence/cene_naftnih_derivatov/">mgrt.gov.si</a>
+          </p>
+
+        </div>
+      </div>
+
+      {% elif subpage == "/oblikovanje" %}
+
+      <a href="http://www.uradni-list.si/1/objava.jsp?urlid=201276&stevilka=2979">link1</a>   <br />
+      <a href="http://www.uradni-list.si/1/content?id=96714">link2</a> <br />
+
+      <img alt="enacba" src="http://latex.codecogs.com/gif.latex?P_t=\Bigg\[\Bigg(\frac{\sum_{i=1}^{n}CIFMedH_i%20\cdot%20e_i}{n}%20\cdot%20\frac{\rho}{1000}\Bigg)\Bigg\]" /> <br />
+
+      {% elif subpage == "/podrobno" %}
+
+      <div id="torta">
+      <div id="dropdownlist"></div>
+      <div id="tortica"></div>
+
+      </div>
+
+      {% elif subpage == "/casovno" %}
+
+        <div id="line"  class="jumbotron">
+             test
+      </div>
+
+      {% elif subpage == "/napoved" %}
+        {{ payload }}
+
+      {% endif %}
+
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Miha 2013
+          <img style="float: right;" src="https://developers.google.com/appengine/images/appengine-silver-120x30.gif"
+               alt="Powered by Google App Engine" />         </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    -->
+
+  </body>
+</html>

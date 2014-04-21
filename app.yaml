@@ -1,0 +1,16 @@
+application: cenanafte
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /assets
+  static_dir: templates/assets
+- url: /.*
+  script: main.app
+
+
+libraries:
+- name: jinja2
+  version: latest

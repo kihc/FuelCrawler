@@ -1,0 +1,57 @@
+body
+{
+padding-top: 20px;
+padding-bottom: 40px;
+/* background: url('assets/img/ozadje-fixed2.png') no-repeat fixed; */
+}
+
+/* Custom container */
+.container-narrow {
+margin: 0 auto;
+max-width: 700px;
+}
+.container-narrow > hr {
+margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+margin: 0 0;
+text-align: center;
+height: 400px;
+}
+.jumbotron h1 {
+font-size: 72px;
+line-height: 1;
+}
+.jumbotron .btn {
+font-size: 21px;
+padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+margin: 0 0;
+}
+.marketing p + h4 {
+margin-top: 28px;
+}
+#lala
+{
+  margin: 0;
+  padding: 0;
+}
+.hor
+{
+
+  display: inline;
+}
+#head_separator
+{
+  margin: 0;
+}
+#bla
+{
+  font-size: 12px;
+  font-style: italic;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Naftni derivati</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable(
+                {{ podatki }}
+            );
+
+            var options = {
+                isStacked: true,
+                title: 'Cena naftnih derivatov',
+                hAxis: {title: 'Derivat', titleTextStyle: {color: 'gray'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+{{ krneki }}
+</body>
+</html>
