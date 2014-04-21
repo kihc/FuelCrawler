@@ -1,7 +1,9 @@
 #-*- coding: utf-8 -*-
 
-from models import ndbSpremembaCene, ndbTecaj, ndbTimeMarker
-import webapp2, urllib2, logging
+from models import NdbSpremembaCene, NdbTecaj, NdbTimeMarker
+import webapp2
+import urllib2
+import logging
 from HTMLParser import HTMLParser
 from google.appengine.api import mail
 from datetime import datetime, timedelta
@@ -16,40 +18,41 @@ url_poraba = ("http://www.mgrt.gov.si/si/delovna_podrocja/notranji_trg/"
 url_tecaj_usd = "http://www.bsi.si/_data/tecajnice/dtecbs.xml"
 url_tecaj_RBOB_gasoline = "http://markets.ft.com/research/Markets/Tearsheets/Summary?s=3334534"
 
-
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 
 class InitHandler(webapp2.RequestHandler):
+    @staticmethod
     def get(self):
-        init = ndbSpremembaCene()
-        init.drobnoProdajnaCena = [0.0, 0.0, 0.0, 0.0]
+
+        init = NdbSpremembaCene()
+        init.drobnoprodajna_cena = [0.0, 0.0, 0.0, 0.0]
         init.trosarina = [0.0, 0.0, 0.0, 0.0]
 
         init.put()
 
+
 class IndexHandler(webapp2.RedirectHandler):
-    #noinspection PyTypeChecker
     def get(self):
+
         imena_derivatov = ['Bencin 95-oktanski', 'Bencin 98-oktanski', 'Dizel', 'Kurilno olje']
         imena_postavk = ['Ostalo', 'Trosarina', 'DDV', 'Marza', 'Clanarina']
-        db_zadnja_sprememba = ndbSpremembaCene.query_cene(None).fetch(2)[0]
-        db_predzadnja_sprememba = ndbSpremembaCene.query_cene(None).fetch(2)[1]
 
-        db_timemark = ndbTimeMarker.query().fetch()[0]
-        db_tecaji_stari = ndbTecaj.query(ndbTecaj.date > db_timemark.date - timedelta(days=14),
-                                         ndbTecaj.date < db_timemark.date).fetch()
-        db_tecaji_aktualni = ndbTecaj.query(ndbTecaj.date > db_timemark.date).fetch()
-        db_cene = ndbSpremembaCene.query_cene(None).fetch()
+        db_zadnja_sprememba = NdbSpremembaCene.query_cene(None).fetch(2)[0]
+        db_predzadnja_sprememba = NdbSpremembaCene.query_cene(None).fetch(2)[1]
+
+        db_timemark = NdbTimeMarker.query().fetch()[0]
+        db_tecaji_stari = NdbTecaj.query(NdbTecaj.date > db_timemark.date - timedelta(days=14),
+                                         NdbTecaj.date < db_timemark.date).fetch()
+
+        db_tecaji_aktualni = NdbTecaj.query(NdbTecaj.date > db_timemark.date).fetch()
+        db_cene = NdbSpremembaCene.query_cene(None).fetch()
 
         const_marze = [0.08530, 0.08530, 0.07998, 0.05265]
         const_zrsbr = [0.01222, 0.01222, 0.01166, 0.01166]
         const_ddv = 1.22
         subpage = self.request.path
-
-
-
 
         json_torta = {
             'cols':
@@ -79,18 +82,18 @@ class IndexHandler(webapp2.RedirectHandler):
         """
 
         krneki = ""
-        krnekiHoriz = ""
+        krneki_horiz = ""
 
         for a, b, c in zip(db_zadnja_sprememba.drobnoProdajnaCena, db_predzadnja_sprememba.drobnoProdajnaCena, imena_derivatov):
             znak = "&uarr; " if a - b > 0 else "&darr; "
             barva = "red;" if a - b > 0 else "lightgreen;"
             krneki += "\n" + c + ": " + str(a) + ' (<span style="color: ' + barva + '">' + znak + str(
                 a - b) + "\xe2\x82\xac</span>) <br />"
-            krnekiHoriz += "\n" + '<li class="hor">' + c + ' (<span style="color: ' + barva + '">' + znak + str(
+            krneki_horiz += "\n" + '<li class="hor">' + c + ' (<span style="color: ' + barva + '">' + znak + str(
                 a - b) + "\xe2\x82\xac</span>)" + '</li>'
 
         krneki = krneki.decode('UTF-8')
-        krnekiHoriz = krnekiHoriz.decode('UTF-8')
+        krneki_horiz = krneki_horiz.decode('UTF-8')
         podatki2 = "['Derivat', 'Ostalo', 'Mar\xc5\xbea distributerjev', '\xc4\x8clanarina ZRSBR', 'Tro\xc5\xa1arina', 'DDV (" + str(
             (const_ddv - 1) * 100) + "%)'],"
         podatki2 = podatki2.decode('UTF-8')
@@ -180,7 +183,7 @@ class IndexHandler(webapp2.RedirectHandler):
             'krneki': krneki,
             'json_torta': json.dumps(json_torta),
             'subpage': subpage,
-            'krnekiHoriz': krnekiHoriz,
+            'krneki_horiz': krneki_horiz,
             'temperatura': temperatura,
             'JSONtemperatura': json.dumps(json_temperatura),
             'datum': db_zadnja_sprememba.date,
@@ -195,7 +198,9 @@ class Krneki(webapp2.RequestHandler):
     def get(self):
         self.response.out.write("google-site-verification: googled67ece29abf3e179.html")
 
+
 class TecajiHandler(webapp2.RequestHandler):
+    @staticmethod
     def get(self):
         try:
             page_1 = urllib2.urlopen(url_tecaj_usd).read()
@@ -215,7 +220,7 @@ class TecajiHandler(webapp2.RequestHandler):
                 if i.find('<td class="text first"') > -1:
                     tecaj_rbob_gasoline = strip_tags(i)
 
-            db_tecaj = ndbTecaj()
+            db_tecaj = NdbTecaj()
             db_tecaj.tecaj_usd = float(tecaj_usd)
             db_tecaj.tecaj_rbob_gasoline = float(tecaj_rbob_gasoline)
             db_tecaj.put()
@@ -223,18 +228,24 @@ class TecajiHandler(webapp2.RequestHandler):
         except urllib2.URLError, e:
             logging.error(e)
 
+
 class TimeMarker(webapp2.RequestHandler):
+    @staticmethod
     def get(self):
 
         #vsakic drugic posodobimo datum
 
-        db_datum = ndbTimeMarker.query().fetch()[0]
+        """
+
+        @param self: test kaj je pa to
+        """
+        db_datum = NdbTimeMarker.query().fetch()[0]
 
         if not db_datum.odd:
             db_datum.odd = True
         else:
             db_datum.key.delete()
-            db_datum = ndbTimeMarker()
+            db_datum = NdbTimeMarker()
             db_datum.odd = False
 
         db_datum.put()
@@ -283,7 +294,7 @@ class OsveziHandler(webapp2.RequestHandler):
             webTros.append(round(float(dizl[4]), 3))
             webTros.append(round(float(kurilc[4]), 3))
 
-            db_sprememba_cene = ndbSpremembaCene.query_cene(None).fetch(1)
+            db_sprememba_cene = NdbSpremembaCene.query_cene(None).fetch(1)
 
             db_cena = db_sprememba_cene[0].drobnoProdajnaCena
             db_tros = db_sprememba_cene[0].trosarina
@@ -303,8 +314,8 @@ class OsveziHandler(webapp2.RequestHandler):
 
             if len(presekCen) < len(db_cena):
                 #imamo spremembo cene
-                dbNovaCena = ndbSpremembaCene()
-                dbNovaCena.drobnoProdajnaCena = webCena
+                dbNovaCena = NdbSpremembaCene()
+                dbNovaCena.drobnoprodajna_cena = webCena
                 dbNovaCena.trosarina = webTros
                 dbNovaCena.put()
 
@@ -359,4 +370,3 @@ app = webapp2.WSGIApplication([('/osvezi', OsveziHandler),
                                ('/timemarker', TimeMarker),
                                ('/googled67ece29abf3e179.html', Krneki)],
                               debug=True)
-
