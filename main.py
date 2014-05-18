@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-from models import NdbSpremembaCene, NdbTecaj, NdbTimeMarker
+from models import ndbSpremembaCene, ndbTecaj, ndbTimeMarker
 import webapp2
 import urllib2
 import logging
@@ -26,7 +26,7 @@ class InitHandler(webapp2.RequestHandler):
     @staticmethod
     def get(self):
 
-        init = NdbSpremembaCene()
+        init = ndbSpremembaCene()
         init.drobnoprodajna_cena = [0.0, 0.0, 0.0, 0.0]
         init.trosarina = [0.0, 0.0, 0.0, 0.0]
 
@@ -39,15 +39,15 @@ class IndexHandler(webapp2.RedirectHandler):
         imena_derivatov = ['Bencin 95-oktanski', 'Bencin 98-oktanski', 'Dizel', 'Kurilno olje']
         imena_postavk = ['Ostalo', 'Trosarina', 'DDV', 'Marza', 'Clanarina']
 
-        db_zadnja_sprememba = NdbSpremembaCene.query_cene(None).fetch(2)[0]
-        db_predzadnja_sprememba = NdbSpremembaCene.query_cene(None).fetch(2)[1]
+        db_zadnja_sprememba = ndbSpremembaCene.query_cene(None).fetch(2)[0]
+        db_predzadnja_sprememba = ndbSpremembaCene.query_cene(None).fetch(2)[1]
 
-        db_timemark = NdbTimeMarker.query().fetch()[0]
-        db_tecaji_stari = NdbTecaj.query(NdbTecaj.date > db_timemark.date - timedelta(days=14),
-                                         NdbTecaj.date < db_timemark.date).fetch()
+        db_timemark = ndbTimeMarker.query().fetch()[0]
+        db_tecaji_stari = ndbTecaj.query(ndbTecaj.date > db_timemark.date - timedelta(days=14),
+                                         ndbTecaj.date < db_timemark.date).fetch()
 
-        db_tecaji_aktualni = NdbTecaj.query(NdbTecaj.date > db_timemark.date).fetch()
-        db_cene = NdbSpremembaCene.query_cene(None).fetch()
+        db_tecaji_aktualni = ndbTecaj.query(ndbTecaj.date > db_timemark.date).fetch()
+        db_cene = ndbSpremembaCene.query_cene(None).fetch()
 
         const_marze = [0.08530, 0.08530, 0.07998, 0.05265]
         const_zrsbr = [0.01222, 0.01222, 0.01166, 0.01166]
@@ -121,9 +121,7 @@ class IndexHandler(webapp2.RedirectHandler):
             #               [derivat,   ostalo,             marža,          članarinaZRSBR, trošarina,      ddv          ]
             podatki2 += str(
                 [c, round(a - b - d - e - ddv, 3), round(d, 3), round(e, 3), round(b, 3), round(ddv, 3)]) + ','
-            json_barchart['rows'].append({'c': [{'v': c, 'f': c}, {'v': round(a - b - d - e - ddv, 3), 'f': 'null'}, {'v': round(d, 3), 'f': 'wtf2'},{'v': round(e, 3), 'f': 'null'},{'v': round(b, 3), 'f': 'null'},{'v': round(ddv, 3), 'f': 'null'}]})
-
-
+            json_barchart['rows'].append({'c': [{'v': c, 'f': c}, {'v': round(a - b - d - e - ddv, 3), 'f': str(round(a - b - d - e - ddv, 3))}, {'v': round(d, 3), 'f': str(round(d, 3))},{'v': round(e, 3), 'f': str(round(e, 3))},{'v': round(b, 3), 'f': str(round(b, 3))},{'v': round(ddv, 3), 'f': str(round(ddv, 3))}]})
 
 
         podatki2 = podatki2[:-1]
@@ -165,7 +163,8 @@ class IndexHandler(webapp2.RedirectHandler):
             for dan in db_tecaji_stari:
                 vrednost.append(dan.tecaj_usd*dan.tecaj_rbob_gasoline)
 
-            test_payload = "Cena v prejsnjem obdobju: " + str(sum(vrednost)/float(len(vrednost)))
+            cena_prej = sum(vrednost)/float(len(vrednost))
+            test_payload = "Cena v prejsnjem obdobju: " + str(cena_prej)
 
         if len(db_tecaji_aktualni) > 0:
             for dan in db_tecaji_aktualni:
@@ -173,6 +172,23 @@ class IndexHandler(webapp2.RedirectHandler):
 
             test_payload += "\nCena v tekocem obdobju: " + str(sum(vrednost)/float(len(vrednost)))
 
+        db_tecaji = ndbTecaj.query(ndbTecaj.date > db_timemark.date - timedelta(days=30)).fetch()
+
+        test_payload += "\n<br />\n"
+        for p in db_tecaji:
+
+            datum = p.date.strftime('%Y-%m-%d %H:%M')
+            vr = float(p.tecaj_rbob_gasoline)*float(p.tecaj_usd)
+            rel = 100.0*float((vr - cena_prej)/cena_prej)
+
+            if p.date >= db_timemark.date:
+                test_payload += "<b>"
+            test_payload += "[ " + datum + " | " + "{:10.2f}".format(vr) + " | " + "{:10.2f}".format(rel) + "% ]"
+
+            if p.date >= db_timemark.date:
+                test_payload += "</b>"
+
+            test_payload += "<br />\n"
 
 
         template_values = {
@@ -220,7 +236,7 @@ class TecajiHandler(webapp2.RequestHandler):
                 if i.find('<td class="text first"') > -1:
                     tecaj_rbob_gasoline = strip_tags(i)
 
-            db_tecaj = NdbTecaj()
+            db_tecaj = ndbTecaj()
             db_tecaj.tecaj_usd = float(tecaj_usd)
             db_tecaj.tecaj_rbob_gasoline = float(tecaj_rbob_gasoline)
             db_tecaj.put()
@@ -239,13 +255,13 @@ class TimeMarker(webapp2.RequestHandler):
 
         @param self: test kaj je pa to
         """
-        db_datum = NdbTimeMarker.query().fetch()[0]
+        db_datum = ndbTimeMarker.query().fetch()[0]
 
         if not db_datum.odd:
             db_datum.odd = True
         else:
             db_datum.key.delete()
-            db_datum = NdbTimeMarker()
+            db_datum = ndbTimeMarker()
             db_datum.odd = False
 
         db_datum.put()
@@ -294,7 +310,7 @@ class OsveziHandler(webapp2.RequestHandler):
             webTros.append(round(float(dizl[4]), 3))
             webTros.append(round(float(kurilc[4]), 3))
 
-            db_sprememba_cene = NdbSpremembaCene.query_cene(None).fetch(1)
+            db_sprememba_cene = ndbSpremembaCene.query_cene(None).fetch(1)
 
             db_cena = db_sprememba_cene[0].drobnoProdajnaCena
             db_tros = db_sprememba_cene[0].trosarina
@@ -314,7 +330,7 @@ class OsveziHandler(webapp2.RequestHandler):
 
             if len(presekCen) < len(db_cena):
                 #imamo spremembo cene
-                dbNovaCena = NdbSpremembaCene()
+                dbNovaCena = ndbSpremembaCene()
                 dbNovaCena.drobnoprodajna_cena = webCena
                 dbNovaCena.trosarina = webTros
                 dbNovaCena.put()

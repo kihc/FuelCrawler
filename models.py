@@ -3,9 +3,9 @@ __author__ = 'Miha'
 from google.appengine.ext import ndb
 
 
-class NdbSpremembaCene(ndb.Model):
+class ndbSpremembaCene(ndb.Model):
     #cene v cetvorckih - 95, 98, diesel, kurilno
-    drobnoprodajna_cena = ndb.FloatProperty(repeated=True)
+    drobnoProdajnaCena = ndb.FloatProperty(repeated=True)
     trosarina = ndb.FloatProperty(repeated=True)
     date = ndb.DateTimeProperty(auto_now_add=True)
 
@@ -14,7 +14,7 @@ class NdbSpremembaCene(ndb.Model):
         return cls.query(ancestor=ancestor_key).order(-cls.date)
 
 
-class NdbTecaj(ndb.Model):
+class ndbTecaj(ndb.Model):
     tecaj_usd = ndb.FloatProperty()
     tecaj_rbob_gasoline = ndb.FloatProperty()
     date = ndb.DateTimeProperty(auto_now_add=True)
@@ -24,6 +24,6 @@ class NdbTecaj(ndb.Model):
         return cls.query(ancestor=ancestor_key).order(-cls.date)
 
 
-class NdbTimeMarker(ndb.Model):
+class ndbTimeMarker(ndb.Model):
     odd = ndb.BooleanProperty()
     date = ndb.DateTimeProperty(auto_now_add=True)
