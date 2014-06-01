@@ -104,9 +104,9 @@ class IndexHandler(webapp2.RedirectHandler):
             [
                 {'id': '', 'label': 'Derivat', 'type': 'string'},
                 {'id': '', 'label': 'Ostalo', 'type': 'number'},
-                {'id': '', 'label': 'Marza', 'type': 'number'},
-                {'id': '', 'label': 'Clanarina', 'type': 'number'},
-                {'id': '', 'label': 'Trosarina', 'type': 'number'},
+                {'id': '', 'label': 'Marža', 'type': 'number'},
+                {'id': '', 'label': 'Članarina', 'type': 'number'},
+                {'id': '', 'label': 'Trošarina', 'type': 'number'},
                 {'id': '', 'label': 'DDV', 'type': 'number'}
             ],
             'rows': []
@@ -127,7 +127,7 @@ class IndexHandler(webapp2.RedirectHandler):
             [
                 {'id': '', 'label': 't', 'type': 'date'},
                 {'id': '', 'label': 'Cena', 'type': 'number'},
-                {'id': '', 'label': 'Trosarina', 'type': 'number'}
+                {'id': '', 'label': 'Trošarina', 'type': 'number'}
             ],
             'rows': []
         }
@@ -137,7 +137,7 @@ class IndexHandler(webapp2.RedirectHandler):
 
             JSONdatum = "Date(" + str(datum.year) + ", " + str(datum.month-1) + ", " + str(datum.day) + ", "
             JSONdatum += str(datum.hour) + ", " + str(datum.minute) + ", " + str(datum.second) + ")"
-            json_casovno['rows'].append({'c': [{'v': JSONdatum, 'f': 'null'}, {'v': str(i.drobnoProdajnaCena[0]), 'f': 'wtf'}, {'v': str(i.trosarina[0]), 'f': 'wtf2'}]})
+            json_casovno['rows'].append({'c': [{'v': JSONdatum, 'f': datetime.strftime(i.date, "%Y-%m-%d")}, {'v': str(i.drobnoProdajnaCena[0])}, {'v': str(i.trosarina[0])}]})
 
         ###
         # pripravimo podatke za napoved
@@ -260,7 +260,6 @@ class TecajiHandler(webapp2.RequestHandler):
 
 
 class TimeMarker(webapp2.RequestHandler):
-    @staticmethod
     def get(self):
 
         #vsakic drugic posodobimo datum
@@ -337,7 +336,7 @@ class OsveziHandler(webapp2.RequestHandler):
             #presek dveh enakih mnozic je enak dolzini osnovne mnozice
 
             presekCen = set(db_cena).intersection(set(webCena))
-            presekTros = set(db_tros).intersection(set(webTros))
+            #presekTros = set(db_tros).intersection(set(webTros))
 
             logging.info(db_cena)
             logging.info(webCena)
@@ -345,7 +344,7 @@ class OsveziHandler(webapp2.RequestHandler):
             if len(presekCen) < len(db_cena):
                 #imamo spremembo cene
                 dbNovaCena = ndbSpremembaCene()
-                dbNovaCena.drobnoprodajna_cena = webCena
+                dbNovaCena.drobnoProdajnaCena = webCena
                 dbNovaCena.trosarina = webTros
                 dbNovaCena.put()
 

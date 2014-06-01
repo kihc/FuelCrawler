@@ -34,19 +34,16 @@
 
       <script type="text/javascript" src="https://www.google.com/jsapi"></script>
       <script type="text/javascript">
-          google.load("visualization", "1", {packages:["corechart"]});
-          google.load("visualization", "1", {packages:["annotatedTimeLine"]});
-          google.load("visualization", "1", {packages: ["controls"]});
-          google.load('visualization', '1', {packages:['table']});
+          google.load("visualization", "1", {packages:['corechart', 'annotatedTimeLine', 'controls', 'table']});
           google.setOnLoadCallback(risi);
 
           function risi()
           {
             var data_json = {{ data_json }}
+            var data = new google.visualization.DataTable(data_json);
 
             {% if subpage == "/" %}
 
-            var data = new google.visualization.DataTable(data_json);
             var options =
             {
               isStacked: true,
@@ -76,8 +73,6 @@
                 }
             }
 
-
-
             // Create and draw the visualization.
             var table = new google.visualization.Table(document.getElementById('line'));
             var options =
@@ -103,20 +98,53 @@
 
             {% elif subpage == "/casovno" %}
 
-            var data = new google.visualization.DataTable(data_json);
-            var options =
-            {
-              title: 'Cene in trošarine čez obdobje',
-              hAxis: {title: 'Čas',  titleTextStyle: {color: '#333'}},
-              vAxis: {minValue: 0, maxValue: 2}
-            };
+            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard'));
 
-            var chart = new google.visualization.AreaChart(document.getElementById('line'));
-            chart.draw(data, options);
+            var control = new google.visualization.ControlWrapper({
+                 'controlType': 'ChartRangeFilter',
+                 'containerId': 'control',
+                 'options': {
+                   // Filter by the date axis.
+                   'filterColumnIndex': 0,
+                   'ui': {
+                     'chartType': 'AreaChart',
+                     'chartOptions': {
+                       'chartArea': {'width': '74%'},
+                       'hAxis': {'baselineColor': 'none'}
+                     },
+                     // Display a single series that shows the closing value of the stock.
+                     // Thus, this view has two columns: the date (axis) and the stock value (line series).
+                     'chartView': {
+                       'columns': [0, 1]
+                     },
+                     // 1 day in milliseconds = 24 * 60 * 60 * 1000 = 86,400,000
+                     'minRangeSize': 86400000
+                   }
+                 },
+                 // Initial range: 2012-02-09 to 2012-03-20.
+                 'state': {'range': {'start': new Date(2012, 10, 1), 'end': new Date(2014, 6, 1)}}
+               });
+
+               var chart = new google.visualization.ChartWrapper({
+                 'chartType': 'AreaChart',
+                 'containerId': 'chart',
+                 'options': {
+                      title: 'Cene in trošarine čez obdobje',
+                      hAxis: {title: 'Čas',  titleTextStyle: {color: '#333'}},
+                      vAxis: {minValue: 0, maxValue: 2}
+                 }
+                });
+
+
+
+
+
+            dashboard.bind(control, chart);
+            dashboard.draw(data);
+
+
 
             {% elif subpage == "/podrobno" %}
-
-            var data = new google.visualization.DataTable(data_json);
 
             // Define a category picker control for the Gender column
             var categoryPicker = new google.visualization.ControlWrapper({
@@ -238,7 +266,10 @@
 
       {% elif subpage == "/casovno" %}
 
-        <div id="line"  class="jumbotron"></div>
+        <div id="dashboard">
+        <div id="chart" style='width: 915px; height: 300px;'></div>
+        <div id="control" style='width: 915px; height: 50px;'></div>
+    </div>
 
       {% elif subpage == "/napoved" %}
         Cena v prejsnjem obdobju: <b>{{ napoved_cene[0] }}</b> <br />

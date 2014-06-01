@@ -2,39 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c12bddb3-c732-46ce-b64e-60d1d09328be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/neki.old.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/neki.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon48-.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/googled67ece29abf3e179.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon-.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon128-.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/ozadje-fixed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap-responsive.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/neki.old.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon48-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon64-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap-responsive.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/glyphicons-halflings-white.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon64-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon128-.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/img/ozadje-fixed2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/ico/favicon128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/googled67ece29abf3e179.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/neki.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cron.yaml" afterPath="$PROJECT_DIR$/cron.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FuelCrawler.iml" afterPath="$PROJECT_DIR$/.idea/FuelCrawler.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <ignored path="FuelCrawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +46,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FuelCrawler$FuelCrawler.coverage" NAME="FuelCrawler Coverage Results" MODIFIED="1401046816272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/FuelCrawler$FuelCrawler.coverage" NAME="FuelCrawler Coverage Results" MODIFIED="1401632962326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -63,7 +63,18 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="60" selection-start="7133" selection-end="7133" vertical-scroll-proportion="0.0" vertical-offset="2685" max-vertical-offset="5970">
+            <state vertical-scroll-proportion="0.5994318" vertical-offset="1274" max-vertical-offset="5955">
+              <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="121" max-vertical-offset="510">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -72,8 +83,12 @@
       <file leaf-file-name="neki.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/neki.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="53" selection-start="3027" selection-end="3027" vertical-scroll-proportion="0.0" vertical-offset="997" max-vertical-offset="4275">
-              <folding />
+            <state vertical-scroll-proportion="-6.130435" vertical-offset="474" max-vertical-offset="4740">
+              <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +149,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -281,7 +296,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="133" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -441,7 +456,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -510,22 +525,8 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -569,11 +570,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33934426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24394184" sideWeight="0.46666667" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24394184" sideWeight="0.53170735" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25201938" sideWeight="0.4680307" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25201938" sideWeight="0.5319693" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36422765" sideWeight="0.6796875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20436187" sideWeight="0.46359223" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.290625" order="7" side_tool="true" content_ui="tabs" />
@@ -616,6 +617,9 @@
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -632,215 +636,281 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="54" selection-start="7575" selection-end="7575" vertical-scroll-proportion="0.0" vertical-offset="3403" max-vertical-offset="5895">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3403" max-vertical-offset="5895">
+          <caret line="201" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="84" selection-start="2796" selection-end="2796" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="3825">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="3825">
+          <caret line="65" column="84" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="491" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="420" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="420">
+          <caret line="16" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="42" selection-start="4326" selection-end="4326" vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855">
+          <caret line="110" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="50" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4410">
+          <caret line="111" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="42" selection-start="4326" selection-end="4326" vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855">
+          <caret line="110" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="50" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" vertical-offset="1435" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1435" max-vertical-offset="4410">
+          <caret line="111" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="42" selection-start="4326" selection-end="4326" vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3490" max-vertical-offset="3855">
+          <caret line="110" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="60" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855">
+          <caret line="90" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="60" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855">
+          <caret line="90" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="60" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855">
+          <caret line="90" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="60" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3855">
+          <caret line="90" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="46" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="4740" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="4740">
+          <caret line="109" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="4410">
+          <caret line="2" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
+          <caret line="7" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="46" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="4740" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="4740">
+          <caret line="109" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="330" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="330">
+          <caret line="11" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cron.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
+          <caret line="3" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="43" selection-start="5985" selection-end="5985" vertical-scroll-proportion="0.0" vertical-offset="2134" max-vertical-offset="4725">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2134" max-vertical-offset="4725">
+          <caret line="150" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="50" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="435" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="435">
+          <caret line="8" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="570" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="570">
+          <caret line="28" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="40" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="4530" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="4530">
+          <caret line="140" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="752" column="20" selection-start="10731" selection-end="10731" vertical-scroll-proportion="0.0" vertical-offset="11280" max-vertical-offset="90675" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11280" max-vertical-offset="90675">
+          <caret line="752" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cron.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/assets/css/bootstrap-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="uml://AppEngineModelDependency/#FuelCrawler">
@@ -860,7 +930,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/googled67ece29abf3e179.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="0" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/assets/ico/favicon-.png">
@@ -880,49 +952,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="937" selection-end="937" vertical-scroll-proportion="1.0793651" vertical-offset="12" max-vertical-offset="570" />
+        <state vertical-scroll-proportion="1.0793651" vertical-offset="12" max-vertical-offset="570">
+          <caret line="28" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cron.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="264" selection-end="264" vertical-scroll-proportion="0.25466892" vertical-offset="0" max-vertical-offset="589" />
+        <state vertical-scroll-proportion="0.25466892" vertical-offset="0" max-vertical-offset="589">
+          <caret line="10" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.old.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="18" selection-start="7584" selection-end="7584" vertical-scroll-proportion="-113.652176" vertical-offset="611" max-vertical-offset="3840" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="493" selection-end="512" vertical-scroll-proportion="0.7803468" vertical-offset="0" max-vertical-offset="510" />
+        <state vertical-scroll-proportion="-113.652176" vertical-offset="611" max-vertical-offset="3840">
+          <caret line="215" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0433526" vertical-offset="0" max-vertical-offset="346" />
+        <state vertical-scroll-proportion="0.0433526" vertical-offset="0" max-vertical-offset="346">
+          <caret line="1" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="930" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="930">
+          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="2" selection-start="1003" selection-end="1003" vertical-scroll-proportion="-9.16" vertical-offset="911" max-vertical-offset="90690" />
+        <state vertical-scroll-proportion="-9.16" vertical-offset="911" max-vertical-offset="90690">
+          <caret line="76" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/neki.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="53" selection-start="3027" selection-end="3027" vertical-scroll-proportion="0.0" vertical-offset="997" max-vertical-offset="4275">
+        <state vertical-scroll-proportion="-6.130435" vertical-offset="474" max-vertical-offset="4740">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="510">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="60" selection-start="7133" selection-end="7133" vertical-scroll-proportion="0.0" vertical-offset="2685" max-vertical-offset="5970">
+        <state vertical-scroll-proportion="0.5994318" vertical-offset="1274" max-vertical-offset="5955">
+          <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
           <folding />
         </state>
       </provider>
