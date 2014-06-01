@@ -37,117 +37,152 @@
           google.load("visualization", "1", {packages:["corechart"]});
           google.load("visualization", "1", {packages:["annotatedTimeLine"]});
           google.load("visualization", "1", {packages: ["controls"]});
-          google.setOnLoadCallback(drawChart);
-          google.setOnLoadCallback(drawTorta);
-          google.setOnLoadCallback(drawLine);
+          google.load('visualization', '1', {packages:['table']});
+          google.setOnLoadCallback(risi);
 
-          function drawLine() {
-            var JSONdata = {{ JSONtemperatura }}
-            var data = new google.visualization.DataTable(JSONdata);
+          function risi()
+          {
+            var data_json = {{ data_json }}
 
-            var options = {
-              title: 'Company Performance',
-              hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+            {% if subpage == "/" %}
+
+            var data = new google.visualization.DataTable(data_json);
+            var options =
+            {
+              isStacked: true,
+              title: 'Deleži cene v EUR',
+              colors: ['#3366CC', '#16CE1C', '#7517CC', '#DC3912', '#FF9900'],
+              hAxis: {title: 'Derivat', titleTextStyle: {color: 'gray'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('graf'));
+            chart.draw(data, options);
+
+            {% elif subpage == "/napoved" %}
+
+            var data = new google.visualization.DataTable(data_json);
+
+            var row = {{ napoved_cene[2] }}
+
+            if (row > 5)
+            {
+
+                var total_columns = data.getNumberOfColumns();
+
+                for (var i = 0; i < total_columns; i++)
+                {
+                    data.setProperty(row, i, 'style', 'border-bottom: 3px solid black;')
+                    data.setProperty({{napoved_cene[3]}}, i, 'style', 'border-bottom: 3px solid black;')
+                }
+            }
+
+
+
+            // Create and draw the visualization.
+            var table = new google.visualization.Table(document.getElementById('line'));
+            var options =
+            {
+                allowHtml: true,
+                showRowNumber: true,
+                sortAscending: false,
+                sortColumn: 0
+            };
+            var format_options =
+            {
+                width: 100,
+                colorNegative: 'green',
+                colorPositive: 'red',
+                max: 5,
+                min: -5
+            };
+              var formatter = new google.visualization.BarFormat(format_options);
+              formatter.format(data, 2); // Apply formatter to second column
+
+              table.draw(data, options);
+
+
+            {% elif subpage == "/casovno" %}
+
+            var data = new google.visualization.DataTable(data_json);
+            var options =
+            {
+              title: 'Cene in trošarine čez obdobje',
+              hAxis: {title: 'Čas',  titleTextStyle: {color: '#333'}},
               vAxis: {minValue: 0, maxValue: 2}
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('line'));
             chart.draw(data, options);
-          }
-          function drawChart() {
 
-              //var data = google.visualization.arrayToDataTable(
-            //          {{ podatki }}
-          //);
+            {% elif subpage == "/podrobno" %}
 
-          var json_data = {{ json_barchart }}
-          var data = new google.visualization.DataTable(json_data);
+            var data = new google.visualization.DataTable(data_json);
 
-          var options = {
-              isStacked: true,
-              title: 'Deleži cene v EUR',
-              colors: ['#3366CC', '#16CE1C', '#7517CC', '#DC3912', '#FF9900'],
-              hAxis: {title: 'Derivat', titleTextStyle: {color: 'gray'}}
-
-          };
-
-          var chart = new google.visualization.ColumnChart(document.getElementById('graf'));
-          chart.draw(data, options);
-          }
-
-          function drawTorta()
-          {
-            var json_data = {{ json_torta }}
-            var data = new google.visualization.DataTable(json_data);
-
-          // Define a category picker control for the Gender column
+            // Define a category picker control for the Gender column
             var categoryPicker = new google.visualization.ControlWrapper({
-          'controlType': 'CategoryFilter',
-          'containerId': 'dropdownlist',
-          'options': {
-            'filterColumnLabel': 'Derivat',
-            'ui': {
-            'labelStacking': 'vertical',
-              'allowTyping': false,
-              'allowMultiple': false
-            }
+              'controlType': 'CategoryFilter',
+              'containerId': 'dropdownlist',
+              'options': {
+                'filterColumnLabel': 'Derivat',
+                'ui': {
+                'labelStacking': 'vertical',
+                  'allowTyping': false,
+                  'allowMultiple': false
+                }
+              }
+            });
+
+            categoryPicker.setState({'selectedValues': ['Dizel']});
+
+            // Define a Pie chart
+            var pie = new google.visualization.ChartWrapper({
+              'chartType': 'PieChart',
+              'containerId': 'tortica',
+              'options': {
+                'width': 600,
+                'height': 300,
+                'title': 'Donuts eaten per person',
+                'chartArea': {'left': 15, 'top': 15, 'right': 0, 'bottom': 0},
+                'pieSliceText': 'label',
+                slices: {  3: {offset: 0.2},
+                        4: {offset: 0.3}
+              }
+              },
+              // Instruct the piechart to use colums 0 (Name) and 3 (Donuts Eaten)
+              // from the 'data' DataTable.
+              'view': {'columns': [0, 2]}
+            });
+
+            // Create a dashboard
+            var a = new google.visualization.Dashboard(document.getElementById('torta')).bind(categoryPicker, pie).draw(data);
+
+            {% endif %}
+
           }
-        });
 
-        categoryPicker.setState({'selectedValues': ['Dizel']});
-
-        // Define a Pie chart
-        var pie = new google.visualization.ChartWrapper({
-          'chartType': 'PieChart',
-          'containerId': 'tortica',
-          'options': {
-            'width': 600,
-            'height': 300,
-            'title': 'Donuts eaten per person',
-            'chartArea': {'left': 15, 'top': 15, 'right': 0, 'bottom': 0},
-            'pieSliceText': 'label',
-            slices: {  3: {offset: 0.2},
-                    4: {offset: 0.3}
-          }
-          },
-          // Instruct the piechart to use colums 0 (Name) and 3 (Donuts Eaten)
-          // from the 'data' DataTable.
-          'view': {'columns': [0, 2]}
-        });
-
-
-
-        // Create a dashboard
-        var a = new google.visualization.Dashboard(document.getElementById('torta')).bind(categoryPicker, pie).draw(data);
-
-      }
-
-      function drawneki() {
+      function drawAnnotated() {
       // Create and populate the data table.
 
-          var JSONdata = {{ JSONtemperatura }}
-          var data = new google.visualization.DataTable(JSONdata);
+          //var JSONdata = {{ JSONtemperatura }}
+          //var data = new google.visualization.DataTable(JSONdata);
 
           // Create and draw the visualization.
-          var neki = new google.visualization.AnnotatedTimeLine(document.getElementById('line'));
+          //var neki = new google.visualization.AnnotatedTimeLine(document.getElementById('line'));
 
-          neki.draw(data, {'displayAnnotations': true});
+          //neki.draw(data, {'displayAnnotations': true});
     }
       </script>
-
   </head>
-
     <body>
         <div class="container-narrow">
-
         <div class="masthead">
         <ul class="nav nav-pills pull-right">
             <li{% if subpage == "/" %} class=active{% endif %}><a href="/">Derivati</a></li>
             <li{% if subpage == "/casovno" %} class=active{% endif %}><a href="casovno">P(t)</a></li>
             <li{% if subpage == "/podrobno" %} class=active{% endif %}><a href="podrobno">Derivati podrobno</a></li>
-            <li{% if subpage == "/oblikovanje" %} class=active{% endif %}><a href="napoved">Napoved</a></li>
+            <li{% if subpage == "/napoved" %} class=active{% endif %}><a href="napoved">Napoved</a></li>
             <li{% if subpage == "/oblikovanje" %} class=active{% endif %}><a href="oblikovanje">Oblikovanje cen</a></li>
-            <li{% if subpage == "/naroci" %} class=active{% endif %}><a href="naroci">Obveščanje</a></li>
+            <!-- <li{% if subpage == "/naroci" %} class=active{% endif %}><a href="naroci">Obveščanje</a></li> -->
         </ul>
         <br />
         <br />
@@ -156,7 +191,7 @@
         </div>
         <hr id="head_separator">
       <ul id="lala">
-      {{ krnekiHoriz }}
+      {{ krneki_horiz }}
       </ul>
       <br />
       <div id="bla">
@@ -170,8 +205,6 @@
       <div id="graf" class="jumbotron">
       </div>
 
-
-
       <div class="row-fluid marketing">
         <div class="span6">
             <h4>Zadnja sprememba</h4>
@@ -179,9 +212,6 @@
             {{ krneki }}
             </p>
         </div>
-
-
-
         <div class="span6">
           <h4>Povzeto po</h4>
           <p>
@@ -208,13 +238,13 @@
 
       {% elif subpage == "/casovno" %}
 
-        <div id="line"  class="jumbotron">
-             test
-      </div>
+        <div id="line"  class="jumbotron"></div>
 
       {% elif subpage == "/napoved" %}
+        Cena v prejsnjem obdobju: <b>{{ napoved_cene[0] }}</b> <br />
+        Cena v prejsnjem obdobju: <b>{{ napoved_cene[1] }}</b>
+        <div id="line"></div>
         {{ payload }}
-
       {% endif %}
 
 
@@ -225,8 +255,8 @@
           <img style="float: right;" src="https://developers.google.com/appengine/images/appengine-silver-120x30.gif"
                alt="Powered by Google App Engine" />         </p>
       </div>
-
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
