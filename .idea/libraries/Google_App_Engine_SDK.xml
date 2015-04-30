@@ -3,13 +3,15 @@
     <CLASSES>
       <root url="file://C:/Program Files (x86)/Google/google_appengine" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/antlr3" />
+      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/apiclient" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/argparse" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/cacerts" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/cherrypy" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/concurrent" />
+      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/deprecated_enum" />
+      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/distutils" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/docker" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/endpoints-1.0" />
-      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/enum" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/fancy_urllib" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/google-api-python-client" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/graphy" />
@@ -20,6 +22,7 @@
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/markupsafe-0.15" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/mox" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/oauth2" />
+      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/oauth2client" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/prettytable" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/protorpc-1.0" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/PyAMF-0.6.1" />
@@ -32,6 +35,7 @@
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/simplejson" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/six" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/sqlcmd" />
+      <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/uritemplate" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/websocket" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/django-1.5" />
       <root url="file://C:/Program Files (x86)/Google/google_appengine/lib/webapp2-2.5.2" />

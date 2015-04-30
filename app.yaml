@@ -5,6 +5,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /adminpanel
+  script: admin.application
+  login: admin
 - url: /assets
   static_dir: templates/assets
 - url: /.*
@@ -14,3 +17,8 @@ handlers:
 libraries:
 - name: jinja2
   version: latest
+
+admin_console:
+  pages:
+  - name: Urejanje podatkov
+    url: /adminpanel

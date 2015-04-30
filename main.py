@@ -11,9 +11,7 @@ import jinja2
 import os
 import json
 
-url_poraba = ("http://www.mgrt.gov.si/si/delovna_podrocja/notranji_trg/"
-              "sektor_za_preskrbo_nadzor_cen_in_varstvo_konkurence/"
-              "cene_naftnih_derivatov/")
+url_poraba = ("http://www.mgrt.gov.si/si/delovna_podrocja/notranji_trg/nadzor_cen_naftnih_derivatov/cene_naftnih_derivatov/")
 
 url_tecaj_usd = "http://www.bsi.si/_data/tecajnice/dtecbs.xml"
 url_tecaj_RBOB_gasoline = "http://markets.ft.com/research/Markets/Tearsheets/Summary?s=3334534"
@@ -31,6 +29,8 @@ class InitHandler(webapp2.RequestHandler):
         init.trosarina = [0.0, 0.0, 0.0, 0.0]
 
         init.put()
+
+
 
 
 class IndexHandler(webapp2.RedirectHandler):
@@ -314,10 +314,10 @@ class OsveziHandler(webapp2.RequestHandler):
             dizl = a[3].split(";")
             kurilc = a[4].split(";")
 
-            webCena.append(round(float(benz95[6]), 3))
-            webCena.append(round(float(benz98[6]), 3))
-            webCena.append(round(float(dizl[6]), 3))
-            webCena.append(round(float(kurilc[6]), 3))
+            webCena.append(round(float(benz95[7]), 3))
+            webCena.append(round(float(benz98[7]), 3))
+            webCena.append(round(float(dizl[7]), 3))
+            webCena.append(round(float(kurilc[7]), 3))
             webTros.append(round(float(benz95[4]), 3))
             webTros.append(round(float(benz98[4]), 3))
             webTros.append(round(float(dizl[4]), 3))
